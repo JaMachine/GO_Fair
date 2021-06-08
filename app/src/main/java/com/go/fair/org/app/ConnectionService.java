@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 
 public class ConnectionService extends Service {
     public static String BroadcastStringForAction = "checkinternet";
-    public static boolean connected;
 
     @Nullable
     @Override

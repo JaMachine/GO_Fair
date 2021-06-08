@@ -7,6 +7,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Base64;
@@ -25,13 +27,12 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import java.io.UnsupportedEncodingException;
 
 import static com.go.fair.org.app.ConnectionService.BroadcastStringForAction;
-import static com.go.fair.org.app.ConnectionService.connected;
-import static com.go.fair.org.app.ConnectionService.isOnline;
 
 public class MainActivity extends AppCompatActivity {
 
     private IntentFilter intentFilter;
     RelativeLayout internetStatus;
+    boolean connected;
 
 
     int timer;
@@ -105,6 +106,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }, delay);
+    }
+
+    public boolean isOnline(Context context) {
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = manager.getActiveNetworkInfo();
+        if (info != null && info.isConnectedOrConnecting()) return true;
+        else return false;
     }
 
 
