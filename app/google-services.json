@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267465764961",
+    "project_id": "comgofairorgapp",
+    "storage_bucket": "comgofairorgapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267465764961:android:ff4ccf0e1d67e4f9023a20",
+        "android_client_info": {
+          "package_name": "com.go.fair.org.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267465764961-o71kfcfelr1i49no9nv5r8qguqs9e57p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB71grIqN6rnetaTo9kgfQ912Djs9yk-1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267465764961-o71kfcfelr1i49no9nv5r8qguqs9e57p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
